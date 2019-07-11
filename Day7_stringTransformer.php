@@ -1,4 +1,9 @@
 <?php
+
+function string_transformer(string $str): string {
+   return implode(' ',array_reverse(explode(' ',strtolower($str) ^ strtoupper($str) ^ $str)));
+}
+
 function stringTransformer($s){
 	$new_string = $word = '';
 	$i = 0;
@@ -18,7 +23,6 @@ function stringTransformer($s){
 			continue;
 		}
 		$word .= chr($ascii_num>96?($ascii_num-32):($ascii_num+32));
-
 	}
 	if(!empty($word)){
 		$new_string = $word.$new_string;
