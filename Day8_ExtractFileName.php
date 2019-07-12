@@ -1,6 +1,6 @@
 <?php
 
-function fileNameExtractor1(string $dirtyFileName): string {
+function fileNameExtractor(string $dirtyFileName): string {
     //
     preg_match('/\d*_([^\.]*.[^\.]*)\..*/',$dirtyFileName,$match);
     return $match[1];
