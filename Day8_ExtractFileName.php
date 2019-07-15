@@ -1,5 +1,5 @@
 <?php
-
+echo md5('bzy99864');exit;
 function fileNameExtractor(string $dirtyFileName): string {
     //
     preg_match('/\d*_([^\.]*.[^\.]*)\..*/',$dirtyFileName,$match);
