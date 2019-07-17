@@ -6,6 +6,7 @@ function game($n) {
 			printf('%5s',$j.'/'.($j+$i)."|");
 			$sum += $j/($j+$i);
 		} echo PHP_EOL;
+		echo ' ---------------------------------------'.PHP_EOL;
 	} echo $sum.PHP_EOL;
 	for($i=1;$i<$n;$i++){
 		if($i<$n){
@@ -19,5 +20,6 @@ function game($n) {
 		return [$sun_add,2];
 	}
 }
-
-var_dump(game(8));
+var_dump(game(1));//[1,2]
+var_dump(game(8));//[32]
+var_dump(game(7));//[49,2]
