@@ -6,6 +6,7 @@ function deep_c(array $a): int {
     if(is_array($value)){
       $c += deep_c($value);
     }
+
   }
   return $c;
   //return count($a, COUNT_RECURSIVE); // Rewrite this with your own logic
