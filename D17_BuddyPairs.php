@@ -40,4 +40,4 @@ function buddy($start, $limit) {
 }
 //题目地址 https://www.codewars.com/kata/59ccf051dcc4050f7800008f/solutions/php
 print_r(buddy(10, 50));// "48 75"
-print_r(buddy(1071625,1103735));// returns "48 75"
+print_r(buddy(1071625,1103735));// returns "1081184 1331967"
