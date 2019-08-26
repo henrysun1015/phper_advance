@@ -57,7 +57,7 @@ return  $str;
 }
 
 
-function multiply(string $a, string $b): string {
+function multiply1(string $a, string $b): string {
   $a = array_reverse(str_split(ltrim($a, '0')));
   $b = array_reverse(str_split(ltrim($b, '0')));
   $r = [];
