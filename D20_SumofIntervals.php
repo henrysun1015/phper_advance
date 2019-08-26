@@ -2,9 +2,6 @@
 //https://www.codewars.com/kata/52b7ed099cdc285c300001cd/train/php
 function sum_intervals(array $intervals): int {
 	  // Your code here
-	if(empty($intervals)){
-		return 0;
-	}
 	$new_intervals = array();
 	$len = count($intervals);
 	$sum_add = 0;
@@ -13,13 +10,8 @@ function sum_intervals(array $intervals): int {
 		for($j=$intervals[$i][0];$j<$intervals[$i][1];$j++){
 			$new_intervals[$j] = 1;
 		}
-		if(!isset($new_intervals[($j)]))
-		$new_intervals[($j)] = 0;
-
 	}
-
 	return array_sum($new_intervals);
-
 }
 
 
