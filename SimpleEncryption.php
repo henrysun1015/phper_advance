@@ -1,7 +1,7 @@
 <?php
 //"This is a test!", 1 -> "hsi  etTi sats!"
 //"This is a test!", 2 -> "hsi  etTi sats!" -> "s eT ashi tist!"
-
+//https://www.codewars.com/kata/simple-encryption-number-1-alternating-split
 function encrypt($text, $n) {
 	if(empty($text) || $n<=0){
 		return $text;
