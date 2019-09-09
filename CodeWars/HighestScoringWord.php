@@ -4,7 +4,6 @@
  * @CreateDate: 2019/9/9 9:04
  * @Author:shr26207 sunhaoran@offcn.com
  */
-
 function high($x) {
 	$high_word = $current = '';
 	$high_score = $score = 0;
