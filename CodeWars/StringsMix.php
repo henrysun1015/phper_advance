@@ -1,6 +1,6 @@
 <?php
 /**
- * @Purpose:
+ * @Purpose:https://www.codewars.com/kata/strings-mix
  * @CreateDate: 2019/9/4 10:37
  * @Author:shr26207 sunhaoran@offcn.com
  */

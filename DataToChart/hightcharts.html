@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+<body>
+<input type="file" id="data" name="data">
+<div id="container" style="min-width:400px;height:600px"></div>
+<script type="text/javascript">
+	var input = document.getElementById('data');
+	var fileText ;
+	input.onchange = function () {
+
+		var file = this.files[0];
+		console.log(file);
+		var reader = new FileReader();
+		reader.readAsText(file,'gb2312');
+		reader.onload = function (e) {
+			fileText = e.target.result.split("\n");
+			console.log(fileText);
+			var categories = fileText[2].split(",");
+			categories.shift();
+			var series = [];
+			for(i=3;i<=3;i++){
+				var s = fileText[i].split(",");
+				var name =s.shift();
+
+				series.push({"name":name,"data":[s.map(Number)[1]]});
+			}
+			console.log(series);
+
+			var chart = Highcharts.chart('container',{
+			chart: {
+				type: 'column',
+				inverted:true,
+			},
+
+			title: {
+				text: '近五年统计'
+			},
+			subtitle: {
+				text: '数据来源: data.stats.gov.cn'
+			},
+			credits:{
+				text: 'IT'
+			},
+			xAxis: {
+				categories: [categories[0]],
+				crosshair: true
+			},
+			yAxis: {
+				min: 0,
+				title: {
+					text: '金额 (￥：元)',
+				}
+			},
+			tooltip: {
+				// head + 每个 point + footer 拼接成完整的 table
+				headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+				pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+					'<td style="padding:0"><b>{point.y:.1f} 元</b></td></tr>',
+				footerFormat: '</table>',
+				shared: true,
+				useHTML: true
+			},
+			plotOptions: {
+				column: {
+					borderWidth: 0
+				},
+				series: {
+					animation: {
+						duration: 30000,
+					},
+					dataLabels:{
+						enabled:true,
+					}
+				},
+			},
+			series: series,
+		});
+		};
+		input.style.display = 'none';
+
+	};
+
+</script>
+</body>
+</html>
