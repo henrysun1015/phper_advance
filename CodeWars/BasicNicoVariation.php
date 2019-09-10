@@ -11,7 +11,7 @@ function nico(string $key, string $message): string {
 	$max_len = ceil($lmsg/$lkey)*$lkey;
 	$j = 0;
 	$new_msg = '';
-	for($i=0;$i<=$max_len;$i++){
+	for($i=0;$i<$max_len;$i++){
 		$new_sort[$key{$j}.'_'.$j] = isset($message{$i})?$message{$i}:' ';
 		$j++;
 		if($j==$lkey){
