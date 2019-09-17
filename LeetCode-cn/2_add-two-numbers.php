@@ -1,16 +1,8 @@
 <?php
 /**
- * @Purpose:
+ * @Purpose:https://leetcode-cn.com/problems/add-two-numbers/
  * @CreateDate: 2019/9/17 11:46
  * @Author:shr26207 sunhaoran@offcn.com
- */
-/**
- * Definition for a singly-linked list.
- * class ListNode {
- *     public $val = 0;
- *     public $next = null;
- *     function __construct($val) { $this->val = $val; }
- * }
  */
 /**
  * Definition for a singly-linked list.
@@ -25,14 +17,6 @@ class ListNode {
 	public $next = null;
 	function __construct($val) { $this->val = $val; }
 }
-/**
- * Definition for a singly-linked list.
- * class ListNode {
- *     public $val = 0;
- *     public $next = null;
- *     function __construct($val) { $this->val = $val; }
- * }
- */
 class Solution {
 
 	/**
